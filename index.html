@@ -141,12 +141,93 @@
 
     <!-- About Start -->
     <div class="container-fluid bg-secondary p-0">
-        <div class="row g-0">
-            <div class="col-lg-6 py-6 px-5">
-                <h1 class="display-5 mb-4">Welcome To <span class="text-primary">SAMAIRANSH</span></h1>
-                <h4 class="text-primary mb-4">Our Vision. Our Mission. Our Goals.</h4>
-                <p class="mb-4">Samairansh Limited is a leading IT consultancy firm dedicated to helping organizations achieve their business goals through sustainable technology solutions. We specialize in Business and Domestic Software Development, IT Consultancy, and a range of other IT services. Our team of experts with over 20 years of combined experience leverages the latest technologies to enhance efficiency and optimize our clients' IT environments.</p>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a>
+    <div class="row g-0">
+        <div class="col-lg-6 py-6 px-5">
+            <h1 class="display-5 mb-4">Welcome To <span class="text-primary">SAMAIRANSH</span></h1>
+            <h4 class="text-primary mb-4">Our Vision. Our Mission. Our Goals.</h4>
+            <p class="mb-4">Samairansh Limited is a leading IT consultancy firm dedicated to helping organizations achieve their business goals through sustainable technology solutions. We specialize in Business and Domestic Software Development, IT Consultancy, and a range of other IT services. Our team of experts with over 20 years of combined experience leverages the latest technologies to enhance efficiency and optimize our clients' IT environments.</p>
+            <a href="#" class="btn btn-primary py-md-3 px-md-5 rounded-pill" onclick="getQuote()">Get A Quote</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="quoteModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Request a Quote</h2>
+        <form id="quoteForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function getQuote() {
+        document.getElementById('quoteModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('quoteModal').style.display = 'none';
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('quoteModal')) {
+            closeModal();
+        }
+    }
+
+    // Handle form submission
+    document.getElementById('quoteForm').onsubmit = function(event) {
+        event.preventDefault();
+        alert('Thank you for your request! We will get back to you soon.');
+        closeModal();
+    }
+</script>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
             </div>
             <div class="col-lg-6">
                 <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
