@@ -3,119 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samairansh | Premier Consulting & Solutions</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Enterprise IT Consulting & Modernization Services</title>
+    <meta name="description" content="Strategic IT consulting, cloud infrastructure modernization, DevSecOps automation, and managed IT services for growing businesses.">
+    
+    <!-- JSON-LD Structured Data for B2B SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ITService",
+      "name": "Samairansh Limited",
+      "description": "Enterprise IT Consulting & Cloud Architecture Services",
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Consulting Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud Architecture & Modernization" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevSecOps & Automation Pipeline" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cybersecurity & Infrastructure Resilience" } }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { color: var(--text); background: var(--white); line-height: 1.6; }
+        
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--white); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text); font-weight: 500; }
+        .btn { background: var(--accent); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+        
+        /* Hero */
+        .hero { padding: 5rem 5% 4rem; text-align: center; background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%); }
+        .hero h1 { font-size: 2.75rem; color: var(--primary); max-width: 800px; margin: 0 auto 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.15rem; max-width: 650px; margin: 0 auto 2rem; color: #64748b; }
+        
+        /* Services */
+        .services { padding: 4rem 5%; background: var(--bg-light); }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 2.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .card { background: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-4px); }
+        .card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        
+        /* Metrics / Trust */
+        .metrics { padding: 4rem 5%; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; background: var(--primary); color: var(--white); }
+        .metric-item { margin: 1rem; }
+        .metric-item .number { font-size: 2.5rem; font-weight: 700; color: #60a5fa; }
+        
+        /* Contact Form */
+        .contact { padding: 4rem 5%; max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; }
+        .submit-btn { width: 100%; border: none; cursor: pointer; font-size: 1rem; }
+        
+        /* Footer */
+        footer { padding: 2rem 5%; text-align: center; border-top: 1px solid #e2e8f0; background: var(--bg-light); font-size: 0.875rem; color: #64748b; }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-uppercase tracking-wide" href="index.html">
-                <span class="text-primary">Samair</span>ansh
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feature.html">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a href="contact.html" class="btn btn-primary rounded-pill px-4">Get Started</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section text-white d-flex align-items-center">
-        <div class="container text-center">
-            <h1 class="display-3 fw-bold mb-3 animate-fade-in">Empowering Next-Gen Business</h1>
-            <p class="lead mb-4 text-light-50 max-w-600 mx-auto">We provide tailored solutions designed to scale your operational standard with precision, velocity, and dynamic modern architecture.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">Work With Us</a>
-                <a href="feature.html" class="btn btn-outline-light btn-lg rounded-pill px-4">Explore Services</a>
-            </div>
-        </div>
+    <header>
+        <a href="#" class="logo">Samairansh Consulting</a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#impact">Impact</a>
+            <a href="#contact" class="btn">Book IT Audit</a>
+        </nav>
     </header>
 
-    <!-- Features Overview -->
-    <section class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h6 class="text-primary text-uppercase fw-bold">Why Choose Us</h6>
-                <h2 class="fw-bold">Designed for High Performance</h2>
+    <section class="hero">
+        <h1>Cloud, DevOps & Enterprise IT Solutions Designed for Scale</h1>
+        <p>We help businesses modernize legacy systems, secure infrastructure, and automate software delivery pipelines with zero operational downtime.</p>
+        <a href="#contact" class="btn">Schedule Free Infrastructure Assessment</a>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Consulting Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Cloud Modernization</h3>
+                <p>Migrate workloads to modern cloud infrastructure (AWS, Azure, GCP) while optimizing architecture for performance and cost efficiency.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 p-4 border-0 shadow-sm text-center">
-                        <div class="icon-box bg-primary-soft text-primary mx-auto mb-4">
-                            <i class="fa-solid fa-chart-line fa-2x"></i>
-                        </div>
-                        <h4 class="fw-bold mb-3">Scalable Growth</h4>
-                        <p class="text-muted">Accelerated business transformation tailored specifically to target growth vectors.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 p-4 border-0 shadow-sm text-center">
-                        <div class="icon-box bg-primary-soft text-primary mx-auto mb-4">
-                            <i class="fa-solid fa-shield-halved fa-2x"></i>
-                        </div>
-                        <h4 class="fw-bold mb-3">Enterprise Security</h4>
-                        <p class="text-muted">Rigorous standards designed to guarantee maximum data privacy and system resiliency.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 p-4 border-0 shadow-sm text-center">
-                        <div class="icon-box bg-primary-soft text-primary mx-auto mb-4">
-                            <i class="fa-solid fa-rocket fa-2x"></i>
-                        </div>
-                        <h4 class="fw-bold mb-3">Rapid Deployment</h4>
-                        <p class="text-muted">Turnkey operations executed efficiently with minimal friction and maximum impact.</p>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>DevSecOps & Automation</h3>
+                <p>Build continuous integration and delivery (CI/CD) pipelines integrated with automated security compliance scanning.</p>
+            </div>
+            <div class="card">
+                <h3>Managed Infrastructure</h3>
+                <p>Full-stack server management, containerization (Docker, Kubernetes), and 24/7 reliability engineering.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-md-start">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h5 class="text-uppercase fw-bold text-primary mb-4">Samairansh</h5>
-                    <p class="text-muted">Delivering market-leading solutions, business efficiency, and seamless operational growth for forward-thinking enterprises globally.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="feature.html" class="text-muted text-decoration-none">Features</a></li>
-                        <li class="mb-2"><a href="blog.html" class="text-muted text-decoration-none">Blog</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-4">Get In Touch</h5>
-                    <p class="text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, UK</p>
-                    <p class="text-muted mb-2"><i class="fa-solid fa-envelope me-2 text-primary"></i><a href="mailto:info@samairansh.com" class="text-muted text-decoration-none">samairansh@gmail.com</a></p>
-                    <p class="text-muted"><i class="fa-solid fa-phone me-2 text-primary"></i><a href="tel:+447551047846" class="text-muted text-decoration-none">+44 (0)7880228669</a></p>
-                </div>
-            </div>
-            <hr class="my-4 border-secondary">
-            <div class="text-center text-muted">
-                <small>&copy; 2026 Samairansh. All rights reserved.</small>
-            </div>
+    <section class="metrics" id="impact">
+        <div class="metric-item">
+            <div class="number">99.99%</div>
+            <div>Target Infrastructure Uptime</div>
         </div>
+        <div class="metric-item">
+            <div class="number">40%</div>
+            <div>Average Cloud Spend Reduction</div>
+        </div>
+        <div class="metric-item">
+            <div class="number">10x</div>
+            <div>Faster Deployment Frequency</div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Request an IT Strategy Call</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Project Requirements</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">Submit Request</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Samairansh Limited. All rights reserved. | IT Consulting & Cloud Architecture</p>
     </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
